@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it matches snapshot 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-37 makeStyles-root-27"
+>
+  <div
+    className="MuiContainer-root makeStyles-titles-28 MuiContainer-maxWidthMd"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h2"
+    >
+      minify
+    </h2>
+    <h5
+      className="MuiTypography-root MuiTypography-h5"
+    >
+      a url shortener
+    </h5>
+  </div>
+  <div
+    className="MuiContainer-root makeStyles-container-30 MuiContainer-maxWidthMd"
+  >
+    <div
+      className="MuiPaper-root makeStyles-container-41 MuiPaper-elevation1 MuiPaper-rounded"
+    >
+      <form
+        autoComplete="off"
+        className="makeStyles-container-41"
+        onSubmit={[Function]}
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root makeStyles-textEntry-40 MuiFormControl-fullWidth"
+          data-testid="toBeShortened"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+            data-shrink={false}
+          >
+            to minify
+          </label>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              autoComplete="off"
+              autoFocus={true}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              data-testid="toBeShortenedField"
+              disabled={false}
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-48 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                className="PrivateNotchedOutline-legendLabelled-50"
+              >
+                <span>
+                  to minify
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            className="MuiFormHelperText-root MuiFormHelperText-contained"
+          >
+            <span
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "&#8203;",
+                }
+              }
+            />
+          </p>
+        </div>
+        <button
+          align="right"
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-42 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          data-testid="requestButton"
+          disabled={true}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={-1}
+          type="submit"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <span
+              className="MuiButton-startIcon MuiButton-iconSizeMedium"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                />
+              </svg>
+            </span>
+            minify me
+          </span>
+        </button>
+      </form>
+      <div
+        className="MuiBox-root MuiBox-root-52 makeStyles-container-41"
+      >
+        <div
+          className="MuiFormControl-root MuiTextField-root makeStyles-textEntry-40 MuiFormControl-fullWidth"
+          data-testid="shortUrl"
+        >
+          <label
+            className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
+            data-shrink={true}
+          >
+            minified
+          </label>
+          <div
+            className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            onClick={[Function]}
+          >
+            <input
+              aria-invalid={false}
+              autoFocus={false}
+              className="MuiInputBase-input MuiOutlinedInput-input"
+              data-testid="shortUrlField"
+              disabled={false}
+              onAnimationStart={[Function]}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              required={false}
+              type="text"
+              value=""
+            />
+            <fieldset
+              aria-hidden={true}
+              className="PrivateNotchedOutline-root-48 MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                className="PrivateNotchedOutline-legendLabelled-50 PrivateNotchedOutline-legendNotched-51"
+              >
+                <span>
+                  minified
+                </span>
+              </legend>
+            </fieldset>
+          </div>
+          <p
+            className="MuiFormHelperText-root MuiFormHelperText-contained"
+          >
+            <span
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "&#8203;",
+                }
+              }
+            />
+          </p>
+        </div>
+        <button
+          align="right"
+          className="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-button-42 MuiButton-containedPrimary Mui-disabled MuiButton-fullWidth Mui-disabled"
+          data-testid="copyButton"
+          disabled={true}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={-1}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            <span
+              className="MuiButton-startIcon MuiButton-iconSizeMedium"
+            >
+              <svg
+                aria-hidden={true}
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm-1 4l6 6v10c0 1.1-.9 2-2 2H7.99C6.89 23 6 22.1 6 21l.01-14c0-1.1.89-2 1.99-2h7zm-1 7h5.5L14 6.5V12z"
+                />
+              </svg>
+            </span>
+            copy
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

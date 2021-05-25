@@ -1,0 +1,58 @@
+version: "3.7"
+services:
+  database:
+    image: "postgres"
+    hostname: "db"
+    env_file:
+      - database.env
+    volumes:
+      - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
+    networks:
+      - private
+    ports:
+      - 5432:5432
+  client:
+    depends_on:
+      - service
+    container_name: client
+    build:
+      context: client/
+      dockerfile: Dockerfile
+    volumes:
+      - "./client:/app"
+      - "/app/node_modules"
+    ports:
+      - 3000:3000
+    networks:
+      - public
+    env_file:
+      - client.env
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  service:
+    depends_on:
+      - database
+    container_name: service
+    build:
+      context: service/
+      dockerfile: Dockerfile
+      target: development
+    env_file:
+      - service.env
+    volumes:
+      - "./service:/app"
+      - "/app/node_modules"
+    command: npm run start:dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    ports:
+      - 8080:8080
+    networks:
+      - private
+      - public
+volumes:
+  database-data:
+  service:
+networks:
+  private:
+  public:
