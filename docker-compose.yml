@@ -9,8 +9,6 @@ services:
       - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
     networks:
       - private
-    ports:
-      - 5432:5432
   client:
     depends_on:
       - service

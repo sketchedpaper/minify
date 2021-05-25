@@ -72,7 +72,7 @@ describe('CatService', () => {
 
   describe('insertOne', () => {
     it('should successfully insert an alias', async () => {
-      expect(await service.create({ fullUrl: testUrl2 }));
+      expect(await service.create({ fullUrl: testUrl2 })).resolves;
     });
   });
 

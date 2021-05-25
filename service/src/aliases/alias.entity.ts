@@ -3,7 +3,7 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Alias {
   @PrimaryGeneratedColumn('increment')
-  id: number | string;
+  id: number;
 
   @Column()
   fullUrl: string;

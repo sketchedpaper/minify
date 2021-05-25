@@ -21,41 +21,37 @@ export class AliasService {
     private readonly repository: Repository<Alias>,
   ) {}
 
-  iv = process.env.CRYPTO_IV;
-
-  secret = process.env.CRYPTO_SECRET;
-
   async genKey() {
-    return (await promisify(scrypt)(this.secret, 'salt', 32)) as Buffer;
-  }
-
-  async getCipher() {
-    return createCipheriv('aes-256-ctr', await this.genKey(), this.iv);
-  }
-
-  async getDecipher() {
-    return createDecipheriv('aes-256-ctr', await this.genKey(), this.iv);
+    return (await promisify(scrypt)(
+      process.env.CRYPTO_SECRET,
+      'salt',
+      32,
+    )) as Buffer;
   }
 
   async encryptId(recordId) {
-    const cipher = await this.getCipher();
-    const encryptedText = Buffer.concat([
+    const cipher = createCipheriv(
+      'aes-256-ctr',
+      await this.genKey(),
+      process.env.CRYPTO_IV,
+    );
+    return Buffer.concat([
       cipher.update(recordId.toString()),
       cipher.final(),
-    ]);
-    return encryptedText.toString('hex');
+    ]).toString('hex');
   }
 
   async decryptId(encryptedId) {
-    const decipher = await this.getDecipher();
+    const decipher = createDecipheriv(
+      'aes-256-ctr',
+      await this.genKey(),
+      process.env.CRYPTO_IV,
+    );
     const buffer = Buffer.from(encryptedId, 'hex');
 
-    const decryptedText = Buffer.concat([
-      decipher.update(buffer),
-      decipher.final(),
-    ]);
-
-    return Number(decryptedText.toString());
+    return Number(
+      Buffer.concat([decipher.update(buffer), decipher.final()]).toString(),
+    );
   }
 
   async create(createAliasDto: CreateAliasDto) {
